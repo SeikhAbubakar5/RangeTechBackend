@@ -1,10 +1,10 @@
 const express = require("express");
 const { linkedInCallback, getUser} = require("../controllers/authController");
 
-const AuthRoutes = express.Router();
+const router = express.Router();
 
-AuthRoutes.get("/callback", linkedInCallback);
-AuthRoutes.get("/get-user", getUser);
+router.get("/callback", linkedInCallback);
+router.get("/get-user", getUser);
 
 
-module.exports = AuthRoutes;
+module.exports = router;
